@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "5e9b59b320c4d90df0466919",
+        "username": "dylan_baghel",
+        "fullName": "Dylan Baghel",
+        "password": "abhishek"
+    },
+    {
+        "_id": "5e9bf2cd2aa59530f0281f1d",
+        "username": "abhi_baghel",
+        "fullName": "Abhishek Baghel",
+        "password": "abhishek"
+    },
+    {
+        "_id": "5e9c70eb349e0f1fbcb7c50c",
+        "username": "bittu_baghel",
+        "fullName": "Bittu Baghel",
+        "password": "abhishek"
+    }
+]
