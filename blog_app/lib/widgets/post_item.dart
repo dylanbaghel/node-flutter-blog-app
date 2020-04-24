@@ -24,8 +24,9 @@ class PostItem extends StatelessWidget {
           elevation: 10,
           child: Column(
             children: <Widget>[
-              Image.network(
-                post.imageUrl,
+              FadeInImage.assetNetwork(
+                placeholder: "assets/images/placeholder.png",
+                image: post.imageUrl,
                 fit: BoxFit.cover,
                 height: 300,
                 width: double.infinity,

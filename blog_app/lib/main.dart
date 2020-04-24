@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import './providers/auth_provider.dart';
 import './providers/posts_provider.dart';
+import './providers/user_provider.dart';
 
 import './screens/login_screen.dart';
 import './screens/timeline_screen.dart';
@@ -10,6 +11,7 @@ import './screens/splash_screen.dart';
 import './screens/edit_post_screen.dart';
 import './screens/manage_posts_screen.dart';
 import './screens/post_detail_screen.dart';
+import './screens/user_profile_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +22,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (_) => AuthProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => UserProvider(),
         ),
         ChangeNotifierProxyProvider<AuthProvider, PostsProvider>(
           update: (_, authData, postData) => PostsProvider(authData.token,
@@ -46,6 +51,7 @@ class MyApp extends StatelessWidget {
               LoginScreen.routeName: (ctx) => LoginScreen(),
               EditPostScreen.routeName: (ctx) => EditPostScreen(),
               PostDetailScreen.routeName: (ctx) => PostDetailScreen(),
+              UserProfileScreen.routeName: (ctx) => UserProfileScreen(),
             },
           );
         },

@@ -154,8 +154,10 @@ class _ManagePostsScreenState extends State<ManagePostsScreen> {
                                 child: ClipRRect(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(100)),
-                                  child: Image.network(
-                                    postData.posts[index].imageUrl,
+                                  child: FadeInImage.assetNetwork(
+                                    placeholder:
+                                        "assets/images/placeholder.png",
+                                    image: postData.posts[index].imageUrl,
                                     fit: BoxFit.cover,
                                   ),
                                 ),
